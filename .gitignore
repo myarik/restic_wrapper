@@ -30,3 +30,5 @@ go.work.sum
 
 # Binary
 restic_wrapper
+restic_wrapper_amd64
+restic_wrapper_arm64
