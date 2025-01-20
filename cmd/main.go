@@ -56,6 +56,7 @@ func init() {
 	viper.SetDefault("restic.executable_path", "/usr/local/bina/restic")
 	viper.SetDefault("restic.files_from", "backup.txt")
 	viper.SetDefault("restic.exclude_file", "exclude.txt")
+	viper.SetDefault("restic.s3_storage_class", "STANDARD_IA")
 
 	viper.SetDefault("host_name", "localhost")
 	viper.SetDefault("security_service", "restic_backup")
