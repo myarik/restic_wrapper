@@ -1,0 +1,13 @@
+backup_directory: /Users/yourusername/.restic_backup
+lock_file: .restic_backup_lock
+log_file: restic_backup.log
+
+restic:
+  executable_path: /usr/local/bin/restic
+  files_list: backup.txt
+  exclude_list: exclude.txt
+
+host_name: localhost
+security_service: restic_backup
+require_ac_power: true
+cleanup_old_backups: true

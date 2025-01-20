@@ -8,6 +8,9 @@
 *.so
 *.dylib
 
+# Idea files
+.idea/
+
 # Test binary, built with `go test -c`
 *.test
 
@@ -23,3 +26,7 @@ go.work.sum
 
 # env file
 .env
+.local_env
+
+# Binary
+restic_wrapper
