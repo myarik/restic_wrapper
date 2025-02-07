@@ -165,7 +165,10 @@ func runResticCommand(ctx context.Context, args ...string) error {
 // sendAwsMetrics sends the backup metrics to AWS CloudWatch
 func sendAwsMetrics(ctx context.Context, duration time.Duration) error {
 	// Load the SDK's configuration from environment and shared config, and create a new client
-	cfg, err := config.LoadDefaultConfig(ctx)
+	cfg, err := config.LoadDefaultConfig(ctx,
+		config.WithSharedConfigFiles([]string{""}),
+		config.WithSharedCredentialsFiles([]string{""}),
+	)
 	if err != nil {
 		log.WithField("err", err).Error("cannot load AWS SDK config")
 		return err
